@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import {
+  BASELINE_RESULT,
   CORE_RULES,
   SUPPORT_WORK,
   TRAINING_PHASES,
@@ -17,10 +18,12 @@ const SESSION_COLORS = {
   Intervals: "#ff6b6b",
   "Long Run": "#f4a261",
   "Over/Under": "#ffd166",
+  "Race Pace": "#ffb703",
+  Shakeout: "#c77dff",
 } as const;
 
 function getSessionTarget(session: TrainingSession, phase: TrainingPhase) {
-  return phase.paceTargets[session.type] ?? phase.targetPace;
+  return session.target ?? phase.paceTargets[session.type] ?? phase.targetPace;
 }
 
 function getSessionCue(session: TrainingSession, phase: TrainingPhase) {
@@ -38,12 +41,20 @@ function getSessionCue(session: TrainingSession, phase: TrainingPhase) {
 
   if (session.type === "Intervals") {
     return phase.id === "earth"
-      ? "Fast turnover with clean mechanics from the first rep to the last."
-      : "Hard but controlled. Finish the final rep with the same form you started with.";
+      ? "Fast but repeatable. Finish with the same mechanics you started with."
+      : "Hit the range without sprinting the first rep.";
   }
 
   if (session.type === "Over/Under") {
-    return "Alternate pressure without breaking rhythm or posture.";
+    return "Change gears smoothly and keep the rhythm intact.";
+  }
+
+  if (session.type === "Race Pace") {
+    return "Practice exact goal rhythm without forcing the opening rep too fast.";
+  }
+
+  if (session.type === "Shakeout") {
+    return "Keep it light, loose, and stop wanting more.";
   }
 
   return phase.id === "air"
@@ -408,32 +419,32 @@ export default function Page() {
 
       <div className="shell">
         <section className="hero">
-          <div className="eyebrow">24-week 10k progression</div>
+          <div className="eyebrow">60:00 baseline / 24-week build</div>
 
           <div className="hero-grid">
             <div>
-              <h1>WATER AIR EARTH</h1>
+              <h1>FIRE / WATER / AIR / EARTH</h1>
               <p className="hero-copy">
-                Track a 24-week 10K progression built around three weekly runs,
-                phase-based pace targets, and coaching notes from the Water,
-                Air, and Earth system.
+                Fire is already done at 60:00. The next 24 weeks chase Water
+                55:00, Air 50:00, and Earth 45:00 through three weekly runs,
+                phase-specific training paces, and controlled deloads.
               </p>
             </div>
 
             <div className="stat-grid">
               <div className="stat-card">
-                <div className="stat-label">Current phase</div>
+                <div className="stat-label">Baseline</div>
+                <div className="stat-value">Fire {BASELINE_RESULT.time}</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-label">Current goal</div>
                 <div className="stat-value" style={{ color: phase.color }}>
-                  {phase.label}
+                  {phase.goalTime}
                 </div>
               </div>
               <div className="stat-card">
                 <div className="stat-label">Target pace</div>
                 <div className="stat-value">{phase.targetPace}</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-label">Structure</div>
-                <div className="stat-value">3 runs + optional 4th</div>
               </div>
             </div>
           </div>
@@ -460,7 +471,9 @@ export default function Page() {
                         : "rgba(255, 255, 255, 0.03)",
                   }}
                 >
-                  <div className="stat-label">Target {item.targetPace}</div>
+                  <div className="stat-label">
+                    Goal {item.goalTime} / {item.targetPace}
+                  </div>
                   <div className="phase-pill-title">{item.label}</div>
                   <div className="phase-pill-text">{item.subtitle}</div>
                 </button>
@@ -483,7 +496,7 @@ export default function Page() {
                 Week {planIndex + 1} of {TRAINING_WEEKS.length}
               </span>
               <span>
-                {phase.label} / Week {week.week}
+                {phase.label} / Goal {phase.goalTime}
               </span>
             </div>
           </div>
@@ -521,14 +534,15 @@ export default function Page() {
 
           <div className="week-meta">
             <div className="meta-card">
-              <div className="section-label">Optional session 4</div>
+              <div className="section-label">Session 4</div>
               <div className="meta-value">{week.recovery}</div>
             </div>
             <div className="meta-card">
               <div className="section-label">Phase notes</div>
               <div className="meta-value">
-                The quality run sets the signal, the easy run protects recovery,
-                and the long run extends durability.
+                {phase.label} aims for {phase.goalTime} at {phase.targetPace}.
+                Let the easy and long-run pace bands make the quality session
+                count.
               </div>
             </div>
           </div>
@@ -621,7 +635,9 @@ export default function Page() {
           </div>
         </section>
 
-        <div className="footer">Train the pace. Keep the easy days easy.</div>
+        <div className="footer">
+          Build from 60:00 to 45:00 one clean block at a time.
+        </div>
       </div>
     </div>
   );

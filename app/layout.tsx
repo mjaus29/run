@@ -21,9 +21,9 @@ const heading = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Water Air Earth 10K Plan",
+  title: "Fire to Earth 10K Progression",
   description:
-    "Track a 24-week 10K progression built around three weekly runs, phase-based pace targets, and coaching notes from the Water, Air, and Earth system.",
+    "Track a 24-week 10K progression that starts from a completed 60:00 Fire run and targets Water 55:00, Air 50:00, and Earth 45:00 through three weekly runs.",
   manifest: "/manifest.json",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],

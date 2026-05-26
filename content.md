@@ -1,160 +1,544 @@
-import { clear } from "console"
-import { on } from "events"
-import { watch } from "fs"
-import { Session } from "inspector"
-import build from "next/dist/build"
-import { run, it, before } from "node:test"
-import { act } from "react"
-import { start } from "repl"
+Here’s the updated structure based on your result:
 
-The 8-Week 10km Progression Guide: Water, Air, and Earth Runs
+- **Fire run:** completed in **60:00**
+- **Water run goal:** **55:00**
+- **Air run goal:** **50:00**
+- **Earth run goal:** **45:00**
 
-1. Foundational Principles of Sustainable Progression
+I’ll give you a **comprehensive updated 8-week / 2-month plan for each run**, step by step, while keeping the progression more realistic and safer than the original. I’m also adjusting the pacing logic so each phase actually builds toward the next one.
 
-As a performance analyst, I view training not as a series of random runs, but as a physiological negotiation with your body. To ensure you reach the start line healthy and optimized, we adhere to two non-negotiable laws of endurance.
+---
 
-* The 80/20 Rule (Intensity Balance): 80% of your weekly volume must be performed at an "Easy" intensity (RPE 3–4). This builds the aerobic base and mitochondrial density required for endurance. Only 20% is reserved for high-intensity work. If you run your easy miles too fast, you steal the recovery necessary to execute your speed sessions effectively.
-* The 10% Rule (Volume Progression): To protect your musculoskeletal system from the impact of repetitive loading, we never increase total weekly volume or the distance of the single longest run by more than 10% week-on-week.
+# Updated 8-Week 10km Progression Guide
 
-Target Intensity Zones
+## Fire → Water → Air → Earth
 
-Intensity Level	RPE Scale (1–10)	HRR (Heart Rate Reserve)	Coaching Cue
-Easy	3–4	Zone 2	Conversational flow; rhythmic breathing.
-Tempo	6–7	Zone 3–4	"Comfortably hard"; the threshold sweet spot.
-Intervals	8–9	Zone 5	All-out effort; dancing with the "red line."
+## 1. Updated Goal Ladder
 
+For 10km, the target paces are:
 
---------------------------------------------------------------------------------
+- **Fire:** 60:00 = **6:00/km**
+- **Water:** 55:00 = **5:30/km**
+- **Air:** 50:00 = **5:00/km**
+- **Earth:** 45:00 = **4:30/km**
 
+This is a meaningful progression:
 
-2. Strength, Conditioning, and Injury Prevention
+- Fire to Water: improve by **30 sec/km**
+- Water to Air: improve by **30 sec/km**
+- Air to Earth: improve by **30 sec/km**
 
-Resistance work is the primary driver of running economy. As a coach, I prioritize a "prehab" mindset: 15–20 minutes of consistent, focused movement twice weekly on rest days is far more effective than sporadic high-intensity gym sessions.
+That’s ambitious, so each 8-week block should emphasize:
 
-Dynamic Warm-Up (10–15 Minutes)
+1. aerobic development,
+2. threshold improvement,
+3. speed economy,
+4. controlled deloads.
 
-Perform a 5-minute slow jog followed by these drills to prime the neuromuscular system:
+---
 
-* A-Skips: Focus on high knees and mid-foot striking to prime hip flexors.
-* B-Skips: Incorporate a hamstring extension to improve leg drive and mechanics.
+# 2. Core Rules for All Three Plans
 
-Essential Conditioning (Twice Weekly)
+## Intensity split
 
-Focus on consistency over intensity. These movements are designed to build a robust frame:
+Keep roughly:
 
-* Calf Raises & Calf Holds: Non-negotiable for preventing shin splints and Achilles issues. Perform slow, controlled raises.
-* Bodyweight Squats: Builds power in the glutes and quads to maintain form during "The Grind."
-* Single-Leg Movements (Lunges/Single-Leg Deadlifts): Essential for correcting imbalances and ensuring symmetrical economy.
-* Kettlebell Work: Use a 10kg weight for functional carries or swings to build core stability.
+- **80% easy**
+- **20% moderate/hard**
 
+## Weekly structure
 
---------------------------------------------------------------------------------
+Use:
 
+- **Session 1:** quality workout
+- **Session 2:** easy aerobic run
+- **Session 3:** long run
+- **Session 4:** optional recovery run or cross-training
 
-3. Phase I: The Water Run (Target Pace: 6:00 min/km)
+## Warm-up before workouts
 
-Objective: Breaking the Hour.
+Before every speed/tempo session:
 
-This plan utilizes a 3-day "Foundation" split. For runners seeking faster physiological adaptation, add the "Recovery" Session 4. Respect the de-load weeks in Week 4 and 8; they are when the actual fitness gains are "baked in."
+- 5–10 min easy jog
+- leg swings
+- A-skips
+- high knees
+- 3–4 strides of 15–20 sec
 
-Pacing Requirements:
+## Strength twice weekly
 
-* Easy: 7:00–7:30 min/km
-* Tempo: 6:10–6:15 min/km
-* Interval: 5:45–5:55 min/km
+15–25 minutes:
 
-Week	Session 1: Speed	Session 2: Easy	Session 3: Long Run	Session 4: Recovery (Optional)
-1	4 x 800m @ 5:50 (2m walk)	5km Easy	6km (Time on feet)	3km Recovery
-2	4km Tempo @ 6:15	5km Easy	7km (10% Rule)	3km Recovery
-3	5 x 1km @ 5:55 (2m walk)	6km Easy	8km (Build engine)	4km Recovery
-4	De-load: 3km Easy	4km Easy	6km Long Run	Rest
-5	6 x 800m @ 5:50	6km Easy	9km Long Run	4km Recovery
-6	5km Tempo @ 6:10	7km Easy	10km Long Run	5km Recovery
-7	6 x 1km @ 5:55	7km Easy	11km Long Run	5km Recovery
-8	De-load: 3km Easy	4km Easy	6km Recovery Run	Rest (Race Prep)
+- calf raises
+- split squats or lunges
+- glute bridges
+- hamstring work
+- planks / side planks
+- single-leg balance work
 
+## Deload
 
---------------------------------------------------------------------------------
+Week 4 and Week 8 reduce load.
 
+## Effort guidance
 
-4. Phase II: The Air Run (Target Pace: 5:30 min/km)
+If tired, use effort first and pace second.
 
-Objective: Sustaining higher aerobic pressure.
+---
 
-We shift focus to "Time on Feet." For the Long Runs, implement a negative split strategy: run the second half slightly faster than the first to simulate race-day fatigue.
+# 3. Phase I — Water Run Plan
 
-Pacing Requirements:
+## Goal: 55:00 for 10km
 
-* Easy: 6:30–6:45 min/km
-* Tempo: 5:40–5:45 min/km
-* Interval: 5:15–5:20 min/km
+### Target race pace: **5:30/km**
 
-Week	Session 1: Speed	Session 2: Easy	Session 3: Long Run	Session 4: Recovery (Optional)
-1	5 x 1km @ 5:20	6km Easy	8km (Negative split)	4km Recovery
-2	5km Tempo @ 5:40	6km Easy	9km (Time on feet)	4km Recovery
-3	6 x 1km @ 5:20	7km Easy	10km (Steady)	5km Recovery
-4	De-load: 4km Easy	5km Easy	7km Long Run	Rest
-5	8 x 800m @ 5:15	7km Easy	11km (Negative split)	5km Recovery
-6	6km Tempo @ 5:35	8km Easy	12km (Time on feet)	6km Recovery
-7	5 x 1.5km @ 5:20	8km Easy	13km (Engine build)	6km Recovery
-8	De-load: 4km Easy	5km Easy	8km Recovery	Rest (Race Prep)
+This phase comes after your **60-minute Fire run**, so the job is to bridge from finishing comfortably to holding stronger sustained pace.
 
+## Recommended training paces
 
---------------------------------------------------------------------------------
+- **Easy:** 6:35–7:05/km
+- **Long run:** 6:35–7:10/km
+- **Tempo:** 5:40–5:50/km
+- **Intervals:** 5:10–5:25/km
+- **Strides:** fast but relaxed, not sprinting
 
+---
 
-5. Phase III: The Earth Run (Target Pace: 5:00 min/km)
+## Water Run — 8 Week Plan
 
-Objective: Elite effort and "Red Line" mastery.
+### Week 1
 
-In this final phase, we introduce "Over-and-Under" intervals. The "Under" is slightly slower than race pace (5:10), while the "Over" is slightly faster (4:50). This teaches your body to clear lactate while under pressure.
+- **Session 1: Intervals**
+  - 5 × 800m @ 5:20–5:25/km
+  - 2:00 easy walk/jog recovery
+- **Session 2: Easy**
+  - 5km easy
+- **Session 3: Long run**
+  - 7km easy
+- **Session 4: Optional recovery**
+  - 3km very easy or 30 min cycling
 
-Pacing Requirements:
+### Week 2
 
-* Easy: 6:00–6:15 min/km | Session | Target Pace | | :--- | :--- | | Tempo / Under | 5:10 min/km | | Over | 4:50 min/km | | Intervals | 4:40–4:50 min/km |
+- **Session 1: Tempo**
+  - 2km easy warm-up
+  - 4km tempo @ 5:45–5:50/km
+  - 1km cool-down
+- **Session 2: Easy**
+  - 5–6km easy
+- **Session 3: Long run**
+  - 8km easy
+- **Session 4: Optional recovery**
+  - 3–4km very easy
 
-Week	Session 1: Speed	Session 2: Easy	Session 3: Long Run	Session 4: Recovery (Optional)
-1	24 x 60s (30s recovery)	7km Easy	10km (10% Rule)	5km Recovery
-2	6km Tempo @ 5:10	7km Easy	11km (Steady)	5km Recovery
-3	1km Over/Unders (x6)	8km Easy	12km (Form focus)	6km Recovery
-4	De-load: 5km Easy	6km Easy	8km Long Run	Rest
-5	10 x 800m @ 4:45	8km Easy	13km (Time on feet)	6km Recovery
-6	7km Tempo @ 5:05	9km Easy	14km (10% Rule)	7km Recovery
-7	24 x 60s (30s recovery)	9km Easy	15km (Peak volume)	7km Recovery
-8	De-load: 5km Easy	6km Easy	9km Recovery	Rest (Race Prep)
+### Week 3
 
-Coaching Cue for 24 x 60s: This session is a mental "freight train." The difficulty comes from the inertia of slowing down and accelerating again. Focus on maintaining a rhythmic "shuffle" during the 30s recovery; do not stop.
+- **Session 1: Intervals**
+  - 4 × 1km @ 5:15–5:20/km
+  - 2:00 recovery
+- **Session 2: Easy**
+  - 6km easy
+- **Session 3: Long run**
+  - 9km easy, last 1km slightly quicker
+- **Session 4: Optional recovery**
+  - 4km easy
 
+### Week 4 — Deload
 
---------------------------------------------------------------------------------
+- **Session 1**
+  - 4km easy + 4 strides
+- **Session 2**
+  - 5km easy
+- **Session 3**
+  - 7km relaxed
+- **Session 4**
+  - Rest or mobility only
 
+### Week 5
 
-6. Technical Mastery: The Watch as Adjudicator
+- **Session 1: Intervals**
+  - 6 × 800m @ 5:15/km
+  - 90 sec jog recovery
+- **Session 2: Easy**
+  - 6km easy
+- **Session 3: Long run**
+  - 10km easy
+- **Session 4: Optional recovery**
+  - 4km very easy
 
-Wearable technology should never dictate your run; it should act as an adjudicator that verifies your internal feel.
+### Week 6
 
-* Heart Rate Reserve (HRR): Use the HRR method to calculate your zones. By using the beats between your resting and maximum heart rate, your zones become personalized and physiologically accurate.
-* Performance Conditioning: Monitor the -20 to +20 score that appears 6–20 minutes into your run. If you see a negative score, it’s a direct indicator of fatigue or impending illness—be prepared to dial back the effort.
-* Pace Pro & Course Dynamics: Use Pace Pro to manage the "sexy hills" (uphills). Do not chase your target pace on an incline; instead, "bank time" on the downhills. This strategy ensures your average pace hits the goal without red-lining too early.
+- **Session 1: Tempo**
+  - 2km warm-up
+  - 5km tempo @ 5:40–5:45/km
+  - 1km cool-down
+- **Session 2: Easy**
+  - 6–7km easy
+- **Session 3: Long run**
+  - 10–11km easy
+- **Session 4: Optional recovery**
+  - 4–5km easy
 
+### Week 7
 
---------------------------------------------------------------------------------
+- **Session 1: Intervals**
+  - 5 × 1km @ 5:10–5:15/km
+  - 2:00 recovery
+- **Session 2: Easy**
+  - 7km easy
+- **Session 3: Long run**
+  - 11km easy, final 2km moderate
+- **Session 4: Optional recovery**
+  - 5km easy
 
+### Week 8 — Race/Taper Week
 
-7. Race Day Strategy and Fueling
+- **Session 1**
+  - 3 × 800m @ goal pace to slightly faster (5:20/km feel)
+  - full recovery
+- **Session 2**
+  - 4–5km easy
+- **Session 3**
+  - 3km shakeout + 4 strides
+- **Session 4**
+  - **10km attempt: 55:00**
+  - pacing plan:
+    - km 1–2: 5:35/km
+    - km 3–7: 5:30/km
+    - km 8–10: 5:25/km if able
 
-The Three-Stage Strategy
+---
 
-1. The Start (1–3km): Settle in. Run approximately 5 seconds slower than your target pace. This manages the adrenaline surge and protects your glycogen stores.
-2. The Grind (4–7km): Lock into your target pace. Focus on "form checks"—drop your shoulders and relax your arms.
-3. The Finish (8–10km): The race "truly starts" at the 7km mark. This is where you shift to "mind over matter" and empty the tank.
+# 4. Phase II — Air Run Plan
 
-High-Performance Fueling
+## Goal: 50:00 for 10km
 
-* Carbohydrate Target: Aim for 60–90g of carbohydrates per hour.
-* Dual-Source Gels: Use gels with a 1:0.8 glucose-to-fructose ratio. This allows your body to utilize different absorption channels, preventing GI distress.
-* The Start Line Gel: Consume one gel on the start line to ensure blood sugar is optimized before the first step.
+### Target race pace: **5:00/km**
 
-Mindset: The Audacity to Try
+This is a bigger jump. Now you need a stronger threshold and better tolerance at faster sustained pace.
 
-Approach the 10km with a mindset of gratitude. Acknowledge the privilege of the effort. When the pain increases, remember your "why." Trust the 80/20 balance you’ve maintained, believe in the data the watch has adjudicated, and simply have the audacity to try.
+## Recommended training paces
+
+- **Easy:** 5:55–6:25/km
+- **Long run:** 6:00–6:30/km
+- **Tempo:** 5:08–5:18/km
+- **Intervals:** 4:40–4:55/km
+- **Cruise intervals:** around 5:05/km
+
+---
+
+## Air Run — 8 Week Plan
+
+### Week 1
+
+- **Session 1: Intervals**
+  - 5 × 1km @ 4:50–4:55/km
+  - 2:00 jog recovery
+- **Session 2: Easy**
+  - 6km easy
+- **Session 3: Long run**
+  - 8km easy
+- **Session 4: Optional recovery**
+  - 4km easy
+
+### Week 2
+
+- **Session 1: Tempo**
+  - 2km warm-up
+  - 4km tempo @ 5:15/km
+  - 1–2km cool-down
+- **Session 2: Easy**
+  - 6–7km easy
+- **Session 3: Long run**
+  - 9km easy, negative split
+- **Session 4: Optional recovery**
+  - 4km recovery
+
+### Week 3
+
+- **Session 1: Intervals**
+  - 6 × 1km @ 4:50/km
+  - 90–120 sec recovery
+- **Session 2: Easy**
+  - 7km easy
+- **Session 3: Long run**
+  - 10km easy
+- **Session 4: Optional recovery**
+  - 5km easy
+
+### Week 4 — Deload
+
+- **Session 1**
+  - 5km easy + 4 strides
+- **Session 2**
+  - 5–6km easy
+- **Session 3**
+  - 8km long easy
+- **Session 4**
+  - Rest or cross-train
+
+### Week 5
+
+- **Session 1: Intervals**
+  - 8 × 800m @ 4:40–4:45/km
+  - 90 sec recovery
+- **Session 2: Easy**
+  - 7km easy
+- **Session 3: Long run**
+  - 11km easy
+- **Session 4: Optional recovery**
+  - 5km easy
+
+### Week 6
+
+- **Session 1: Tempo**
+  - 2km warm-up
+  - 6km tempo @ 5:10/km
+  - 1km cool-down
+- **Session 2: Easy**
+  - 8km easy
+- **Session 3: Long run**
+  - 12km easy
+- **Session 4: Optional recovery**
+  - 5–6km easy
+
+### Week 7
+
+- **Session 1: Mixed workout**
+  - 3 × 2km @ 5:00–5:05/km
+  - 2:30 jog recovery
+- **Session 2: Easy**
+  - 8km easy
+- **Session 3: Long run**
+  - 12–13km easy with final 3km steady
+- **Session 4: Optional recovery**
+  - 6km easy
+
+### Week 8 — Race/Taper Week
+
+- **Session 1**
+  - 4 × 800m @ 4:45/km with full recovery
+- **Session 2**
+  - 5km easy
+- **Session 3**
+  - 3km shakeout + strides
+- **Session 4**
+  - **10km attempt: 50:00**
+  - pacing:
+    - km 1–2: 5:05/km
+    - km 3–7: 5:00/km
+    - km 8–10: 4:55/km if strong
+
+---
+
+# 5. Phase III — Earth Run Plan
+
+## Goal: 45:00 for 10km
+
+### Target race pace: **4:30/km**
+
+This phase is significantly harder. To run 45:00, you need:
+
+- real threshold strength,
+- strong running economy,
+- improved VO2 support,
+- durability from higher-quality volume.
+
+## Recommended training paces
+
+- **Easy:** 5:25–5:55/km
+- **Long run:** 5:30–6:00/km
+- **Tempo:** 4:38–4:45/km
+- **Intervals:** 4:10–4:25/km
+- **Race-pace work:** 4:30/km
+
+---
+
+## Earth Run — 8 Week Plan
+
+### Week 1
+
+- **Session 1: Intervals**
+  - 6 × 800m @ 4:20–4:25/km
+  - 90 sec jog recovery
+- **Session 2: Easy**
+  - 7km easy
+- **Session 3: Long run**
+  - 10km easy
+- **Session 4: Optional recovery**
+  - 5km easy
+
+### Week 2
+
+- **Session 1: Tempo**
+  - 2km warm-up
+  - 5km tempo @ 4:42–4:45/km
+  - 1–2km cool-down
+- **Session 2: Easy**
+  - 7–8km easy
+- **Session 3: Long run**
+  - 11km easy
+- **Session 4: Optional recovery**
+  - 5km easy
+
+### Week 3
+
+- **Session 1: Over/Unders**
+  - 5 × 1km:
+    - 500m @ 4:25/km
+    - 500m @ 4:35/km
+  - 2:00 jog recovery
+- **Session 2: Easy**
+  - 8km easy
+- **Session 3: Long run**
+  - 12km easy, final 2km steady
+- **Session 4: Optional recovery**
+  - 6km easy
+
+### Week 4 — Deload
+
+- **Session 1**
+  - 5km easy + 4 strides
+- **Session 2**
+  - 6km easy
+- **Session 3**
+  - 8–9km relaxed
+- **Session 4**
+  - Rest
+
+### Week 5
+
+- **Session 1: Intervals**
+  - 10 × 600m @ 4:15–4:20/km
+  - 75 sec recovery
+- **Session 2: Easy**
+  - 8km easy
+- **Session 3: Long run**
+  - 12–13km easy
+- **Session 4: Optional recovery**
+  - 6km easy
+
+### Week 6
+
+- **Session 1: Tempo**
+  - 2km warm-up
+  - 6km tempo @ 4:40/km
+  - 1km cool-down
+- **Session 2: Easy**
+  - 8–9km easy
+- **Session 3: Long run**
+  - 13–14km easy
+- **Session 4: Optional recovery**
+  - 6–7km easy
+
+### Week 7
+
+- **Session 1: Race-pace session**
+  - 3 × 2km @ 4:30/km
+  - 2:30 recovery
+- **Session 2: Easy**
+  - 9km easy
+- **Session 3: Long run**
+  - 14km easy with last 3km steady
+- **Session 4: Optional recovery**
+  - 7km easy
+
+### Week 8 — Race/Taper Week
+
+- **Session 1**
+  - 5 × 400m @ 4:05–4:10/km
+  - full easy recovery
+- **Session 2**
+  - 5–6km easy
+- **Session 3**
+  - 3km shakeout + strides
+- **Session 4**
+  - **10km attempt: 45:00**
+  - pacing:
+    - km 1–2: 4:33–4:35/km
+    - km 3–7: 4:30/km
+    - km 8–10: squeeze under 4:30 if available
+
+---
+
+# 6. Suggested Order of Execution
+
+Given your current outcome:
+
+1. **You already completed Fire in 60 min**
+2. Do **Water plan** next for 8 weeks
+3. Then **Air plan** for 8 weeks
+4. Then **Earth plan** for 8 weeks
+
+That gives you **24 weeks total** from here.
+
+A smart version would be:
+
+- 8 weeks Water
+- 1 lighter transition week
+- 8 weeks Air
+- 1 lighter transition week
+- 8 weeks Earth
+
+---
+
+# 7. Important Reality Check
+
+The jump from:
+
+- **60 → 55** is realistic with disciplined training
+- **55 → 50** is hard but achievable
+- **50 → 45** is a serious performance jump
+
+So for Earth, you may need:
+
+- more sleep,
+- better fueling,
+- consistent strength work,
+- and possibly more than one 8-week cycle.
+
+That’s normal.
+
+---
+
+# 8. Weekly Example Layout
+
+A good weekly rhythm:
+
+- **Mon:** Rest or strength
+- **Tue:** Quality workout
+- **Wed:** Rest or mobility
+- **Thu:** Easy run
+- **Fri:** Strength
+- **Sat:** Long run
+- **Sun:** Optional recovery run
+
+---
+
+# 9. Fueling and recovery recommendations
+
+For these plans:
+
+- Eat carbs before quality sessions
+- Hydrate well the day before long runs
+- If running over 75 minutes, consider carbs during run
+- Sleep 7.5–9 hours where possible
+- If legs feel dead for 3+ days, reduce volume by 20–30% for that week
+
+---
+
+# 10. My recommendation
+
+**Use these updated targets:**
+
+- **Water:** 55 min
+- **Air:** 50 min
+- **Earth:** 45 min
+
+**And start with the Water block immediately.**
+
+If you want, I can also turn this into one of these formats:
+
+1. a **clean table version**,
+2. a **day-by-day calendar for 24 weeks**, or
+3. a **printable checklist / tracker**.

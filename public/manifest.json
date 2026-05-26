@@ -1,7 +1,7 @@
 {
-  "name": "Water Air Earth 10K Plan",
-  "short_name": "10K Phases",
-  "description": "A 24-week 10K progression built around three weekly runs: one quality session, one easy run, and one long run.",
+  "name": "Fire to Earth 10K Progression",
+  "short_name": "10K Ladder",
+  "description": "A 24-week 10K progression that starts from a completed 60:00 Fire run and targets Water 55:00, Air 50:00, and Earth 45:00.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#07131c",
